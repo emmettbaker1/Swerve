@@ -147,3 +147,8 @@ namespace IntakeConstants {
     constexpr int kConveyorCanId = 7;
     constexpr double kIntakeSpeed = 0.3;
 }
+
+namespace ArmConstants {
+    constexpr int kArmCanId = 9;
+    constexpr double kArmSpeed = 0.3;
+}

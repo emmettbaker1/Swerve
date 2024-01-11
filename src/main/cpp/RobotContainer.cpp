@@ -62,7 +62,11 @@ void RobotContainer::ConfigureButtonBindings() {
 
     frc2::JoystickButton(&m_driverController,
                        frc::XboxController::Button::kX)
-      .WhileTrue(new frc2::RunCommand([this] { m_intake.Stop(); }, {&m_intake}));      
+      .WhileTrue(new frc2::RunCommand([this] { m_intake.Stop(); }, {&m_intake}));   
+
+            frc2::JoystickButton(&m_driverController,
+                       frc::XboxController::Button::kY)
+      .WhileTrue(new frc2::RunCommand([this] { m_arm.RunArm(); }, {&m_arm}));       
 }
 
 frc2::Command* RobotContainer::GetAutonomousCommand() {
